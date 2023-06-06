@@ -11,7 +11,7 @@ jobs:
     - name: comment on PR with Binder link
       uses: actions/github-script@v6
       with:
-        github-token: ${{ secrets.PAT }} # use your secret name here
+        github-token: ${{ secrets.pat }} # use your secret name here
         script: |
           var BRANCH_NAME = process.env.BRANCH_NAME;
           github.rest.issues.createComment({

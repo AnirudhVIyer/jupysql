@@ -1,6 +1,6 @@
 
 name: Binder Badge
-on: [push,workflow_dispatch]
+on: [push, workflow_dispatch]
 
 jobs:
   binder:
@@ -11,7 +11,7 @@ jobs:
     - name: comment on PR with Binder link
       uses: actions/github-script@v6
       with:
-        github-token: ${{secrets.GITHUB_TOKEN}}
+        github-token: ${{ secrets.PAT }} # use your secret name here
         script: |
           var BRANCH_NAME = process.env.BRANCH_NAME;
           github.rest.issues.createComment({

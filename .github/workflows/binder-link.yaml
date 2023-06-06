@@ -1,6 +1,6 @@
 
 name: Binder Badge
-on: [pull_request_target]
+on: [push,workflow_dispatch]
 
 jobs:
   binder:
